@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { query } from '../apis/fetchImage';
 import Loader from './Loader';
 
-const InputPanel = ({inputPrompts, setInputPrompts, setError}) => {
+const InputPanel = ({inputPrompts, setInputPrompts, setError, inputFieldVisible}) => {
     const [inputValue, setInputValue] = useState("")
     const [loading, setLoading] = useState(false)
 
@@ -34,7 +34,7 @@ const InputPanel = ({inputPrompts, setInputPrompts, setError}) => {
     }
 
   return (
-    <div className='input-field'>
+    <div className={`input-field ${inputFieldVisible ? 'visible' : ''}`}>
         <div className="text-area">
             <h4>Your comic prompts will appear here</h4>
             {inputPrompts.map((item, index)=> {

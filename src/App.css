@@ -100,8 +100,9 @@
 .comic-view{
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 10px; 
   align-items: flex-start;
   justify-content: start;
 }
@@ -110,6 +111,35 @@
   margin: 10px;
 }
 
+.comic-view p{
+  margin: auto;
+}
+
+.comic-item {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #ff0000; 
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 1;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.comic-item:hover .remove-btn {
+  opacity: 1; 
+}
 .error {
   position: fixed;
   min-width: 100px;
@@ -120,4 +150,56 @@
   padding: 10px;
   border-radius: 5px;
   z-index: 999; 
+}
+
+@media (max-width: 767px) {
+  
+
+  
+  .floating-button {
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+  }
+
+  .dashboard{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input-field {
+    display: none;
+    position: fixed;
+    width: 90%;
+    top: 70px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateX(100%);
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 999;
+  }
+
+  .input-field .text-area{
+    height: 84%;
+  }
+
+  
+  .input-field.visible {
+    display: block;
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

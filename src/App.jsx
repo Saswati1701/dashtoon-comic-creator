@@ -13,17 +13,33 @@ function App() {
   }
 
   const [inputPrompts, setInputPrompts] = useState([
-
+    // Format, data will be added after user enters value
+    // {
+    //   id: uuidv4(),
+    //   text: inputValue,
+    //   imageUrl: imageUrl
+    // }
   ]);
+
+  const [inputFieldVisible, setInputFieldVisible] = useState(false);
+
+  const toggleInputField = () => {
+    setInputFieldVisible(!inputFieldVisible);
+  };
 
   return (
     <div className="App">
       <HeaderView />
       <div className="dashboard">
-        <InputPanel inputPrompts={inputPrompts} setInputPrompts={setInputPrompts} setError={setError} />
+        <InputPanel inputPrompts={inputPrompts} setInputPrompts={setInputPrompts} setError={setError} inputFieldVisible={inputFieldVisible} />
         <ComicView inputPrompts={inputPrompts} setInputPrompts={setInputPrompts} />
       </div>
       { error !== "" && <Error errorText={error} clearError={clearError} /> }
+
+      <button className="floating-button" onClick={toggleInputField}>
+        Toggle Input
+      </button>
+
     </div>
   );
 }
