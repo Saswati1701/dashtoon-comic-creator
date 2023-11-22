@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const Error = () => {
+const Error = ({errorText, clearError}) => {
+
+  useEffect(()=> {
+    setTimeout(()=> {
+        clearError();
+    }, 4000)
+  }, []);
+
   return (
-    <div>Error</div>
+    <div className='error'>
+        {errorText}
+    </div>
   )
 }
 

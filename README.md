@@ -1,6 +1,6 @@
 # Componenet Structure
 ```
-App.js
+App.jsx
     - HeaderView.jsx
     - InputPanel.jsx
     - ComicView.jsx
