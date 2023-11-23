@@ -3,7 +3,7 @@ import React from 'react'
 const ComicView = ({ inputPrompts, setInputPrompts }) => {
   const handleRemoveImage = (id) => {
     // Implement logic to remove the image at the given index
-    const updatedPrompts = inputPrompts.filter((item, i) => item.id!=id);
+    const updatedPrompts = inputPrompts.filter((item, i) => item.id!==id);
     setInputPrompts(updatedPrompts);
   };
 
@@ -15,7 +15,7 @@ const ComicView = ({ inputPrompts, setInputPrompts }) => {
           <button className='remove-btn' onClick={() => handleRemoveImage(item.id)}>
             X
           </button>
-          <img width='300px' src={item.imageUrl} alt={item.text} />
+          <img className='image-size' src={item.imageUrl} alt={item.text} />
         </div>
       ))}
     </div>

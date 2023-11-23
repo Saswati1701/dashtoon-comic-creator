@@ -22,6 +22,7 @@ const InputPanel = ({inputPrompts, setInputPrompts, setError, inputFieldVisible}
                     text: inputValue,
                     imageUrl: imageUrl
                 }])
+                localStorage.setItem("stored", JSON.stringify(inputPrompts))
                 setLoading(false);
             })
             .catch((err) => {
@@ -35,16 +36,17 @@ const InputPanel = ({inputPrompts, setInputPrompts, setError, inputFieldVisible}
 
   return (
     <div className={`input-field ${inputFieldVisible ? 'visible' : ''}`}>
+        <div className="input">
+            <input value={inputValue} onChange={(e)=> setInputValue(e.target.value)} type="text" placeholder='Create your first page'/>
+            <button disabled={loading} onClick={handleClick}> { loading ? <Loader /> : "Create!" } </button>
+        </div>
         <div className="text-area">
-            <h4>Your comic prompts will appear here</h4>
+            <p>{inputPrompts.length === 0 ? `You will see your prompts here` : `YOUR PROMPTS`}</p>
             {inputPrompts.map((item, index)=> {
-                return <li key={item.id}> {index+1}: {item.text} </li>
+                return <li className='input-prompt' key={item.id}><span>{index+1}</span> {item.text} </li>
             })}
         </div>
-        <div className="input">
-            <input value={inputValue} onChange={(e)=> setInputValue(e.target.value)} type="text" />
-            <button disabled={loading} onClick={handleClick}> { loading ? <Loader /> : "GO!" } </button>
-        </div>
+        
     </div>
   )
 }

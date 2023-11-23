@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import './App.css';
+// import './App.css';
+import './App2.css';
 import ComicView from './components/ComicView';
 import Error from './components/Error';
 import HeaderView from './components/HeaderView';
@@ -12,14 +13,21 @@ function App() {
     console.log("Error Cleared!");
   }
 
+  // Format, data will be added after user enters value
+  // {
+  //     id: uuidv4(),
+  //     text: inputValue,
+  //     imageUrl: imageUrl
+  //   }
+
+  const storedInputPrompts = JSON.parse(localStorage.getItem("stored"))
+  console.log(storedInputPrompts)
   const [inputPrompts, setInputPrompts] = useState([
-    // Format, data will be added after user enters value
-    // {
-    //   id: uuidv4(),
-    //   text: inputValue,
-    //   imageUrl: imageUrl
-    // }
   ]);
+  if(typeof(storedInputPrompts) === 'object'){
+    setInputPrompts(storedInputPrompts)
+  }
+  console.log(inputPrompts)
 
   const [inputFieldVisible, setInputFieldVisible] = useState(false);
 
@@ -36,9 +44,9 @@ function App() {
       </div>
       { error !== "" && <Error errorText={error} clearError={clearError} /> }
 
-      <button className="floating-button" onClick={toggleInputField}>
+      {/* <button className="floating-button" onClick={toggleInputField}>
         Toggle Input
-      </button>
+      </button> */}
 
     </div>
   );

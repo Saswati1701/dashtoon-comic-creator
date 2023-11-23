@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .header{
@@ -9,15 +10,18 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid gray;
+  /* border-bottom: 1px solid gray; */
 }
 
 .header img {
   margin-right: 10px;
 }
 
+.image-size{
+  height: 300px;
+}
 .dashboard{
-  height: calc(100vh - 50px);
+  height: calc(100vh - 61px);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -25,40 +29,61 @@
 }
 
 .input-field{
-  width: 500px;
+  /* width: 500px; */
   height: 100%;
-  border-right: 1px solid gray;
+  /* border-right: 1px solid gray; */
+  font-size: 16px;
+  background-color: #ebf8ff;
+  color: black;
+  border-radius: 0 15px 0 0;
+
 }
 
 .input-field .text-area{
   height: 89%;
-  margin: 20px 0  0 30px;
+  /* margin: 20px 0  0 30px; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: left;
 }
 
-.input-field .text-area h4{
-  margin-bottom: 20px;
+.input-field .text-area h3{
+  /* margin-bottom: 20px; */
+  width: 100%;
+  margin: 43px 0 23px 0;
+  padding: 0px 0px 15px 0;
+  border-bottom: 1px solid #C4C4C4;
+  text-align: left;
 }
 
 .input-field .text-area li {
-  margin-top: 5px;
+  /* margin-top: 5px; */
+  list-style-type: none;
+  padding: 15px 0;
+}
+
+.input-field .text-area li span {
+  /* margin-top: 5px; */
+  color: white;
+  background-color: #90d8ff;
+  padding: 4px 15px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .input-field .input{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .input-field .input input{
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: inherit;
   line-height: 1.5;
-  padding: 8px;
+  padding: 8px 25px;
   border: 1px solid #ccc;
   border-radius: 4px;
   transition: border-color 0.3s ease;
@@ -71,10 +96,10 @@
 
 .input-field .input button{
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: inherit;
   line-height: 1.5;
   padding: 8px 12px;
-  background-color: #dda3ff;
+  background-color: #0d47a1;
   color: #fff; 
   border: 1px solid #dda3ff;
   border-radius: 4px;
@@ -82,8 +107,9 @@
 }
 
 .input-field .input button:hover {
-  background-color: #dda3ff; 
+  background-color: #052049; 
   border-color: #dda3ff; 
+  cursor: pointer;
 }
 
 .input-field .input button:focus {
@@ -101,10 +127,12 @@
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  grid-template-columns: repeat(5, 1fr); 
   gap: 10px; 
   align-items: flex-start;
   justify-content: start;
+  overflow-x: scroll;
+
 }
 
 .comic-view img{

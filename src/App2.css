@@ -1,0 +1,138 @@
+.App{
+    height: 100vh;
+    background-color: #27264E;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    color: white;
+    background-color: #35356B;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+}
+
+.dashboard{
+    height: 89%;
+    /* border: 1px solid orange; */
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    color: white;
+}
+
+.input-field{
+    width: 23%;
+    background-color: #3B3B79;
+    margin-right: 10px;
+    padding-top: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 15px;
+}
+.input-field .input{
+    /* border: 1px solid white; */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.input-field .input input{
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0px;
+    margin-bottom: 16px;
+    background-color: transparent;
+    border-radius: 15px;
+    border: 1px solid #5e5db1;
+    transition: border-color 0.3s ease;
+
+}
+
+.input-field .input input:focus{
+    border-color: #007bff; 
+    outline: none; 
+  }
+
+  .input-field .input button{
+    box-sizing: border-box;
+    font-size: inherit;
+    line-height: 1.5;
+    padding: 8px 12px;
+    background-color: #6759FA;
+    color: #fff; 
+    border: 1px solid #4B4A8C;
+    border-radius: 13px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .input-field .input button:hover {
+    background-color: #052049; 
+    border-color: #dda3ff; 
+    cursor: pointer;
+  }
+  
+  .input-field .input button:focus {
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3); 
+  }
+  
+  
+  .input-field .input button:active {
+    background-color: #004080; 
+    border-color: #004080; 
+  }
+
+.input-field .text-area p{
+    margin-bottom: 12px;
+    color: #adade4;
+    font-size: large;
+}
+.input-field .text-area{
+    /* border: 1px solid white; */
+    width: 80%;
+}
+
+.input-field .text-area li{
+    list-style-type: none;
+    font-size: 13px;
+    font-weight: 400;
+    border-bottom: 1px solid #4B4A8C;
+    padding: 8px 0 8px 0px;
+    margin-bottom: 10px;
+}
+
+.input-field .text-area li span{
+    margin-right: 8px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+}
+
+.comic-view{
+    /* border: 1px solid pink; */
+    width: 76%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    overflow-x: scroll;
+}
+
+.image-size{
+    height: 200px;
+}
