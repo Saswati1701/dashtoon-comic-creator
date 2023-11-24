@@ -132,9 +132,13 @@
   display: none;
 }
 
+
 .comic-layout p{
+  color: #4B4A8C;
   margin: 55px;
+  position: fixed;
 }
+
 .comic-view{
   /* border: 1px solid white; */
   position: relative;
@@ -291,11 +295,6 @@
     position: relative;
   }
 
-  
-
-  .comic-layout p{
-    color: #4B4A8C;
-  }
 
   .comic-view{
     /* border: 1px solid white; */
