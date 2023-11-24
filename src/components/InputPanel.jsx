@@ -36,15 +36,16 @@ const InputPanel = ({inputPrompts, setInputPrompts, setError, inputFieldVisible}
 
   return (
     <div className={`input-field ${inputFieldVisible ? 'visible' : ''}`}>
-        <div className="input">
-            <input value={inputValue} onChange={(e)=> setInputValue(e.target.value)} type="text" placeholder='Create your first page'/>
-            <button disabled={loading} onClick={handleClick}> { loading ? <Loader /> : "Create!" } </button>
-        </div>
+        
         <div className="text-area">
             <p>{inputPrompts.length === 0 ? `You will see your prompts here` : `YOUR PROMPTS`}</p>
             {inputPrompts.map((item, index)=> {
                 return <li className='input-prompt' key={item.id}><span>{index+1}</span> {item.text} </li>
             })}
+        </div>
+        <div className="input">
+            <input value={inputValue} onChange={(e)=> setInputValue(e.target.value)} type="text" placeholder='Create your first page'/>
+            <button disabled={loading} onClick={handleClick}> { loading ? <Loader /> : "Create!" } </button>
         </div>
         
     </div>

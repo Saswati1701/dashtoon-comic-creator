@@ -5,29 +5,39 @@ import ComicView from './components/ComicView';
 import Error from './components/Error';
 import HeaderView from './components/HeaderView';
 import InputPanel from './components/InputPanel';
+import { useEffect } from 'react';
 
 function App() {
   const [error, setError] = useState("Errors will appear here!");
+
+  useEffect(() => {
+    const handleBeforeUnload = (event) => {
+      const message = "Are you sure you want to leave? Your changes may not be saved.";
+      event.returnValue = message; // Standard for most browsers
+      return message; // For some older browsers
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []); // useEffect will run only once on mount
+
   const clearError = () => {
     setError("");
     console.log("Error Cleared!");
   }
-
-  // Format, data will be added after user enters value
-  // {
-  //     id: uuidv4(),
-  //     text: inputValue,
-  //     imageUrl: imageUrl
-  //   }
-
-  const storedInputPrompts = JSON.parse(localStorage.getItem("stored"))
-  console.log(storedInputPrompts)
   const [inputPrompts, setInputPrompts] = useState([
-  ]);
-  if(typeof(storedInputPrompts) === 'object'){
-    setInputPrompts(storedInputPrompts)
-  }
-  console.log(inputPrompts)
+    // Format, data will be added after user enters value
+    // {
+      //   id: uuidv4(),
+      //   text: inputValue,
+      //   imageUrl: imageUrl
+      // }
+    ]);
+    localStorage.setItem("stored", JSON.stringify(inputPrompts))
+    console.log(inputPrompts)
 
   const [inputFieldVisible, setInputFieldVisible] = useState(false);
 
@@ -44,9 +54,9 @@ function App() {
       </div>
       { error !== "" && <Error errorText={error} clearError={clearError} /> }
 
-      {/* <button className="floating-button" onClick={toggleInputField}>
+      <button className="floating-button" onClick={toggleInputField}>
         Toggle Input
-      </button> */}
+      </button>
 
     </div>
   );
