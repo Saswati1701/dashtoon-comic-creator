@@ -54,7 +54,7 @@ function App() {
       </div>
       { error !== "" && <Error errorText={error} clearError={clearError} /> }
 
-      <button className="floating-button" onClick={toggleInputField}>
+      <button className="floating-button" onClick={toggleInputField} aria-hidden="true">
         Toggle Input
       </button>
 

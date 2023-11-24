@@ -45,7 +45,7 @@ const InputPanel = ({inputPrompts, setInputPrompts, setError, inputFieldVisible}
         </div>
         <div className="input">
             <input value={inputValue} onChange={(e)=> setInputValue(e.target.value)} type="text" placeholder='Create your first page'/>
-            <button disabled={loading} onClick={handleClick}> { loading ? <Loader /> : "Create!" } </button>
+            <button disabled={loading} onClick={handleClick}> { loading ? <Loader /> : "Go!" } </button>
         </div>
         
     </div>

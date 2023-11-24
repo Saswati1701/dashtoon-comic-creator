@@ -139,7 +139,7 @@
   /* border: 1px solid white; */
   position: relative;
   height: 97.8%;
-  min-width: 173%;
+  min-width: 165%;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));; 
   grid-template-rows: repeat(2, 50%);
@@ -158,12 +158,12 @@
 
 .comic-view .comic-item button{
   position: absolute;
-  background: gray;
+  background: red;
   color: white;
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  border: 1px solid gray;
+  border: 1px solid red;
   display: inline-block;
   line-height: 4px;
   opacity: 0;
@@ -175,6 +175,10 @@
 }
 .comic-item{
   height: 100%;
+}
+
+.floating-button{
+  display: none;
 }
 
 @media (max-width: 1200px){
@@ -190,54 +194,14 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));; 
     grid-template-rows: repeat(5, 70%);
   }
-}@media (max-width: 767px) {
+}
+
+@media(max-width: 767px){
   
-
-  
-  .floating-button {
-    position: fixed;
-    top: 15px;
-    right: 10px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    transform: translateX(-100%);
-  }
-
-  .dashboard{
-    align-items: center;
-    justify-content: center;
-  }
-
-  .input-field {
-    display: none;
-    position: fixed;
-    width: 90%;
-    top: 70px;
-    right: 20px;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transform: translateX(100%);
-    opacity: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    z-index: 999;
-  }
-
-  .input-field .text-area{
-    height: 84%;
-  }
-
-  
-  .input-field.visible {
+  .floating-button{
     display: block;
-    transform: translateX(0);
-    opacity: 1;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
   }
 }
