@@ -1,4 +1,4 @@
-# Componenet Structure
+# Component Structure
 ```
 App.jsx
     - HeaderView.jsx
