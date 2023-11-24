@@ -15,6 +15,7 @@
     padding: 14px;
 }
 
+
 .dashboard{
     height: 89%;
     /* border: 1px solid orange; */
@@ -216,16 +217,20 @@
     right: 16px;
   } */
 
+  .header h3{
+    width: 60%;
+  }
+
   .floating-button {
     display: inline;
     position: fixed;
     top: 2%;
     right: -10%;
-    background-color: #007bff;
+    background-color: #ee204c;
     color: #fff;
     padding: 10px;
     border: none;
-    border-radius: 50%;
+    border-radius: 5px;
     cursor: pointer;
     transition: transform 0.3s ease;
     transform: translateX(-100%);
@@ -233,17 +238,18 @@
   }
 
   .dashboard{
+    color: white;
     position: relative;
-    top: 100px;
+    top: 80px;
     align-items: center;
     justify-content: center;
+    padding: 10px 10px 0 10px;
   }
 
   .input-field {
-    color: black;
     display: none;
     position: fixed;
-    width: 90%;
+    width: 80%;
     height: 85%;
     top: 70px;
     right: 20px;
@@ -254,7 +260,7 @@
     transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform: translateX(100%);
     opacity: 0;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #17172fd1;
     z-index: 100;
   }
 
@@ -263,7 +269,7 @@
   }
 
   .input-field .text-area p{
-    color: black;
+    /* color: black; */
   }
 
   
@@ -305,7 +311,11 @@
 
 
   .comic-view .comic-item {
-    width: 50%;
+    width: 86%;
+  }
+
+  .comic-view .comic-item img{
+    height: auto;
   }
 
   .header{
