@@ -7,40 +7,6 @@ const ComicView = ({ inputPrompts, setInputPrompts }) => {
     setInputPrompts(updatedPrompts);
   };
 
-  const inputPrompts2 = [
-    {
-        id: 1,
-        text: "asdfghjk",
-        imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS"
-    },
-    {
-      id: 2,
-      text: "asdfghjk",
-      imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS"
-  },
-  {
-    id: 3,
-    text: "asdfghjk",
-    imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS"
-},
-{
-  id: 4,
-  text: "asdfghjk",
-  imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS"
-},
-{
-  id: 5,
-  text: "asdfghjk",
-  imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS"
-},
-{
-  id: 6,
-  text: "asdfghjk",
-  imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS"
-},
-
-  ]
-
   return (
     <div className='comic-layout'>
         {inputPrompts.length === 0 && <p>Start Creating your comics here</p>}

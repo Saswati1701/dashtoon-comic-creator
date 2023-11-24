@@ -216,16 +216,20 @@
     right: 16px;
   } */
 
+  .header h3{
+    width: 50%;
+  }
+
   .floating-button {
     display: inline;
     position: fixed;
     top: 2%;
-    right: -10%;
+    right: -8%;
     background-color: #007bff;
     color: #fff;
     padding: 10px;
     border: none;
-    border-radius: 50%;
+    border-radius: 5px;
     cursor: pointer;
     transition: transform 0.3s ease;
     transform: translateX(-100%);
@@ -240,13 +244,13 @@
   }
 
   .input-field {
-    color: black;
+    /* color: black; */
     display: none;
     position: fixed;
-    width: 90%;
+    width: 80%;
     height: 85%;
     top: 70px;
-    right: 20px;
+    right: 6px;
     background-color: #fff;
     padding: 10px;
     border: 1px solid #ccc;
@@ -254,7 +258,7 @@
     transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform: translateX(100%);
     opacity: 0;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #17172fd1;
     z-index: 100;
   }
 
@@ -262,9 +266,9 @@
     height: 84%;
   }
 
-  .input-field .text-area p{
+  /* .input-field .text-area p{
     color: black;
-  }
+  } */
 
   
   .input-field.visible {
@@ -303,9 +307,17 @@
     height: 100%;
   }
 
+  .comic-item{
+    height: auto;
+  }
 
   .comic-view .comic-item {
-    width: 50%;
+    width: 80%;
+    height: auto;
+  }
+
+  .comic-view .comic-item img{
+    height: auto;
   }
 
   .header{
@@ -321,4 +333,10 @@
     width: 100%;
   }
   
+}
+
+@media(max-width: 400px){
+  .floating-button{
+    right: -20%;
+  }
 }
