@@ -1,3 +1,9 @@
+# Clone the Repo
+- ```git clone https://github.com/Saswati1701/dashtoon-comic-creator.git```
+
+# Branch to use (master is the base branch)
+-  ```git checkout master```
+
 # Steps to run locally
 - ```npm install```
 - ```npm start```
