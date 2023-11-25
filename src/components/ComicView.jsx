@@ -25,6 +25,7 @@ const ComicView = ({ inputPrompts, setInputPrompts }) => {
     }))
   }
 
+
   return (
     <div className='comic-layout'>
         {inputPrompts.length === 0 && <p>Start Creating your comics here</p>}
@@ -34,7 +35,7 @@ const ComicView = ({ inputPrompts, setInputPrompts }) => {
             <button className='remove-btn' onClick={() => handleRemoveImage(item.id)}>
               X
             </button>
-            { istext ? (<p>  {item.image_annotation} </p>) : ( <input value={item.image_annotation} onChange={(e)=> handleInputChange(e, item.id)} /> ) }
+            { istext ? (<p> 🔴 {item.image_annotation} </p>) : ( <input value={item.image_annotation} onChange={(e)=> handleInputChange(e, item.id)} /> ) }
             <img onClick={handleImageClick} className='image-size' src={item.imageUrl} alt={item.text} />
           </div>
         ))}
