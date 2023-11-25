@@ -1,6 +1,6 @@
 import { useState } from 'react';
-// import './App.css';
-import './App2.css';
+import './App.css';
+// import './App2.css';
 import ComicView from './components/ComicView';
 import Error from './components/Error';
 import HeaderView from './components/HeaderView';
@@ -33,6 +33,7 @@ function App() {
     // {
       //   id: uuidv4(),
       //   text: inputValue,
+      //   image_annotation: inputValue,
       //   imageUrl: imageUrl
       // }
     ]);

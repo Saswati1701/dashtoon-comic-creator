@@ -15,11 +15,13 @@ const InputPanel = ({inputPrompts, setInputPrompts, setError, inputFieldVisible}
                 console.log({
                     id: uuidv4(),
                     text: inputValue,
+                    image_annotation: inputValue,
                     imageUrl: imageUrl
                 });
                 setInputPrompts([...inputPrompts, {
                     id: uuidv4(),
                     text: inputValue,
+                    image_annotation: inputValue,
                     imageUrl: imageUrl
                 }])
                 localStorage.setItem("stored", JSON.stringify(inputPrompts))
