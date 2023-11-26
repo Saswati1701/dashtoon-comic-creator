@@ -380,6 +380,7 @@ display: none;
 }
 
 .comic-view .comic-item button {
+  position: relative;
   background: red;
   top: 37px;
   margin-left: 5px;
